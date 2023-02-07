@@ -1,3 +1,4 @@
+import 'package:clean_architecture_mvvm/presentation/post/post_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const PostDemoScreen(),
     );
   }
 }
