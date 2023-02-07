@@ -1,4 +1,4 @@
 // url
 class ApiUrl {
-  static const String posts = "/Biuni/PokemonGO-Pokedex/master/pokedex.json";
+  static const String posts = "/posts";
 }

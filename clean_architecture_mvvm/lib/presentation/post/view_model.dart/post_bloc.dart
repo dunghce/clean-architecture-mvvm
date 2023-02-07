@@ -10,8 +10,9 @@ class PostCubit extends Cubit<PostState> {
       PostUseCase(PostRepositoryImpl(RemoteDataSourceImpl()));
   void getListPosts() async {
     try {
-      final data = await postUseCase.execute();
-      emit(state.copyWith(data));
+      (await postUseCase.execute()).fold((left) => null, (right) {
+        emit(state.copyWith(right));
+      });
     } catch (e) {
       //  print(e);
     }

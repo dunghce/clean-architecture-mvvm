@@ -1,3 +1,3 @@
 class AppConfigs {
-  static const String authority = "raw.githubusercontent.com";
+  static const String authority = "https://jsonplaceholder.typicode.com";
 }

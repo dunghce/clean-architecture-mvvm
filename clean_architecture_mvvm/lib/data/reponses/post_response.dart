@@ -1,3 +1,11 @@
+class CategoryPost {
+  final List<PostResponse> result;
+  CategoryPost(this.result);
+  factory CategoryPost.fromJson(Map<String, dynamic> json) {
+    return CategoryPost(json['result']);
+  }
+}
+
 class PostResponse {
   final int id;
   final int userId;
@@ -13,8 +21,8 @@ class PostResponse {
     return PostResponse(
       id: json['id'] ?? 0,
       userId: json['userId'] ?? 0,
-      title: json['candy'] ?? '',
-      body: json['img'] ?? '',
+      title: json['title'] ?? '',
+      body: json['body'] ?? '',
     );
   }
 }
