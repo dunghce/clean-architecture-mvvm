@@ -1,5 +1,5 @@
-import 'package:clean_architecture_mvvm/app/api_ul.dart';
-import 'package:clean_architecture_mvvm/app/app_configs.dart';
+import 'package:clean_architecture_mvvm/app/configs/api_ul.dart';
+import 'package:clean_architecture_mvvm/app/configs/app_configs.dart';
 import 'package:clean_architecture_mvvm/data/reponses/post_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';

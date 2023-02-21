@@ -1,6 +1,8 @@
+import 'package:clean_architecture_mvvm/app/resources/color_manager.dart';
 import 'package:clean_architecture_mvvm/domain/models/post.dart';
 import 'package:clean_architecture_mvvm/presentation/post/view_model.dart/post_bloc.dart';
 import 'package:clean_architecture_mvvm/presentation/post/view_model.dart/post_state.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -11,7 +13,12 @@ class PostDemoScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('App Demo'),
+        title: Text(
+          'info'.tr(),
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: Colors.white,
+              ),
+        ),
       ),
       body: BlocProvider(
         create: (context) => PostCubit()..getListPosts(),
@@ -27,7 +34,13 @@ class PostDemoScreen extends StatelessWidget {
                   title: Text(
                     item.title,
                   ),
-                  subtitle: Text(item.body),
+                  subtitle: Text(
+                    item.body,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.copyWith(color: AppColors.textColor),
+                  ),
                 ),
               );
             },
