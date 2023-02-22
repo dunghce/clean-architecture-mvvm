@@ -1,6 +1,6 @@
 import 'dart:convert' as convert;
 
-import 'package:clean_architecture_mvvm/app/app_configs.dart';
+import 'package:clean_architecture_mvvm/app/configs/app_configs.dart';
 import 'package:http/http.dart' as http;
 
 class RequestHttp {
