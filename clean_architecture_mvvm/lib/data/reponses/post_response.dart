@@ -12,10 +12,10 @@ class CategoryPostResonse {
 
 @JsonSerializable()
 class PostResponse {
-  final int id;
-  final int userId;
-  final String title;
-  final String body;
+  final int? id;
+  final int? userId;
+  final String? title;
+  final String? body;
   PostResponse({
     required this.id,
     required this.userId,
