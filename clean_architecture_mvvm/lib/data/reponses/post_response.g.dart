@@ -6,13 +6,15 @@ part of 'post_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CategoryPost _$CategoryPostFromJson(Map<String, dynamic> json) => CategoryPost(
+CategoryPostResonse _$CategoryPostResonseFromJson(Map<String, dynamic> json) =>
+    CategoryPostResonse(
       (json['result'] as List<dynamic>)
           .map((e) => PostResponse.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$CategoryPostToJson(CategoryPost instance) =>
+Map<String, dynamic> _$CategoryPostResonseToJson(
+        CategoryPostResonse instance) =>
     <String, dynamic>{
       'result': instance.result,
     };

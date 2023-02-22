@@ -2,11 +2,12 @@ import 'package:json_annotation/json_annotation.dart';
 part 'post_response.g.dart';
 
 @JsonSerializable()
-class CategoryPost {
+class CategoryPostResonse {
   final List<PostResponse> result;
-  CategoryPost(this.result);
-  factory CategoryPost.fromJson(Map<String, dynamic> json) =>
-      _$CategoryPostFromJson(json);
+  CategoryPostResonse(this.result);
+  factory CategoryPostResonse.fromJson(Map<String, dynamic> json) =>
+      _$CategoryPostResonseFromJson(json);
+  Map<String, dynamic> toJson() => _$CategoryPostResonseToJson(this);
 }
 
 @JsonSerializable()
@@ -23,4 +24,5 @@ class PostResponse {
   });
   factory PostResponse.fromJson(Map<String, dynamic> json) =>
       _$PostResponseFromJson(json);
+  Map<String, dynamic> toJson() => _$PostResponseToJson(this);
 }
